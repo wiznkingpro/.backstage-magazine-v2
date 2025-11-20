@@ -1,0 +1,15 @@
+
+
+.article_container_title button{
+	padding: 20px;
+	background-color: black;
+	color: white;
+	border: none;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.article_container_title button:hover{
+	background-color: white;
+	color: black;
+}

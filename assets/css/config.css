@@ -1,0 +1,64 @@
+
+.alan-sans{
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	color: black;
+	font-family: Alan Sans;
+/*	box-sizing: border-box;*/
+
+}
+
+body{
+	background-color: white;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+a:hover{
+	opacity: 0.8;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: black;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	transition: all 0.4s ease;
+	z-index: 900;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top.visible {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+	background: white;
+	color: black;
+}

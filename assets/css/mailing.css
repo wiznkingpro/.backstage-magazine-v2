@@ -1,0 +1,36 @@
+
+
+.mailing_main_cont{
+	width: 100%;
+	min-height: 200px;
+/*	border: 1px solid black;*/
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mailing_main_cont form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mailing_main_cont input{
+	width: 300px;
+	padding: 10px 20px 10px 20px;
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	outline: none;
+}
+
+.mailing_main_cont button{
+	padding: 10px 20px 10px 20px;
+	background-color: black;
+	border: none;
+	color: white;
+	cursor: pointer;
+}

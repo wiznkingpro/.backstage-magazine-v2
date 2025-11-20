@@ -1,0 +1,25 @@
+
+
+.content_about{
+	width: 100%;
+	min-height: 300px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.content_about p{
+	color: black;
+}
+.content_about_photo {
+	width: 300px;
+	object-fit: cover;
+
+}
+.content_about_text{
+/*	border: 1px solid black;*/
+	width: 300px;
+	height: 100%;
+}

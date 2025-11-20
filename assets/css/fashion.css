@@ -1,0 +1,28 @@
+
+
+.content_fashion_title{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	margin: 0 auto;
+}
+
+.content_fashion_title h2{
+	color: white;
+	font-size: 32px;	
+}
+
+.content_main_page_fashion{
+	width: 100%;
+	min-height: 300px;
+	margin: 10px auto;
+}
+.content_main_page_fashion img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
