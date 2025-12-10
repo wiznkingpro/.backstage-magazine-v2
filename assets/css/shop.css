@@ -19,7 +19,7 @@
 	grid-template-columns: repeat(6, 1fr);
 	gap: 10px;
 	padding: 20px 0px 10px 0px;
-	border: 1px solid red;
+
 }
 .optional_page_shop img{
 	width: 100%;
