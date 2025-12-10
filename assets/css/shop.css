@@ -9,7 +9,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-/*	border: 1px solid red;*/
+	
 	padding: 0px 0px 10px 0px;
 }
 .optional_page_shop_cont_items{
@@ -19,6 +19,7 @@
 	grid-template-columns: repeat(6, 1fr);
 	gap: 10px;
 	padding: 20px 0px 10px 0px;
+	border: 1px solid red;
 }
 .optional_page_shop img{
 	width: 100%;
@@ -30,8 +31,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+
 }
 .optional_page_shop_item p{
+	text-align: center;
+	width: 100%;
+	height:50px;
 	color: white;
 	font-size: 24px;
 	font-weight: 300;
