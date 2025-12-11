@@ -1,41 +1,26 @@
     document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('nav');
 
-        // --- Параметры ---
-        // Используем размеры, соответствующие nav или его ожидаемому размеру
-        // Для примера, пусть будет 100x85, как в оригинальном коде, но это может быть адаптивно
         const width = 100;
         const height = 85;
         const centerX = width / 2;
         const centerY = height / 2;
-        const outerRadius = 10  ; // Уменьшаем для более реалистичной кривизны
+        const outerRadius = 10  ;
 
         // --- Физические параметры ---
         const n_air = 1.0;
-        const n_glass = 1.5; // Стандартный показатель преломления для "стекла"
-        const delta = 0.001; // Для численной производной
+        const n_glass = 1.5;
+        const delta = 0.001;
 
-        // --- 1. Функция поверхности (Simple circular arc) ---
-        // В статье описывается, что f(distanceFromSide) возвращает высоту.
-        // Для простой дуги (half-circle profile) высота z на расстоянии d от края рассчитывается как:
-        // z = sqrt(r^2 - (r - d)^2), где r - радиус дуги.
-        // При d = 0 (на краю), z = 0.
-        // При d = r (в центре), z = r.
         const surfaceFunction = (distanceFromSide) => {
             if (distanceFromSide >= outerRadius) return 0; // За пределами радиуса высота 0
             const d_from_center = outerRadius - distanceFromSide; // d - расстояние от края к центру
             const z = Math.sqrt(Math.max(0, outerRadius * outerRadius - d_from_center * d_from_center));
-            // Возвращаем нормализованную высоту, чтобы результат был в пределах [0, 1]
-            // Это не обязательно для вычисления нормали, но полезно для масштабирования.
-            // В данном случае, нормализация не требуется для самой функции высоты, но важно понимать масштаб.
-            // Возвращаем просто z.
+          
             return z;
         };
 
-        // --- 2. Предварительный расчёт величины и направления смещения по радиусу ---
-        // В статье говорится, что смещение симметрично, и его можно рассчитать для половины объекта (например, 127 сэмплов).
-        // numSamples = ceil(outerRadius) - это количество точек от края до центра (или от центра до края, в зависимости от интерпретации).
-        // Для круга, если outerRadius = 127, то numSamples = 127.
+
         const numSamples = Math.ceil(outerRadius);
         const displacementMagnitudes = [];
         const displacementAngles = [];
@@ -149,7 +134,7 @@
             displacementAngles.push(angle);
         }
 
-        // --- 3. Нормализация векторов ---
+       
         const maximumDisplacement = Math.max(...displacementMagnitudes.map(Math.abs));
         if (maximumDisplacement === 0) {
             console.error("Maximum displacement is 0, cannot normalize.");
@@ -160,7 +145,7 @@
             angle: displacementAngles[i]
         }));
 
-        // --- 4. Генерация полной карты смещения ---
+       
         const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
@@ -210,10 +195,10 @@
 
         ctx.putImageData(imageData, 0, 0);
 
-        // --- 5. Преобразуем canvas в Data URL ---
+
         const dataUrl = canvas.toDataURL('image/png');
 
-        // --- 6. Создаём SVG-фильтр динамически ---
+
         const svgNS = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(svgNS, "svg");
         svg.setAttribute("width", "0");
@@ -239,8 +224,7 @@
         const feDisplace = document.createElementNS(svgNS, "feDisplacementMap");
         feDisplace.setAttribute("in", "SourceGraphic");
         feDisplace.setAttribute("in2", "displacement_map");
-        // Масштабируем смещение. maximumDisplacement - это нормализованная величина.
-        // Множитель 20 может быть подобран эмпирически для желаемого эффекта.
+   
         feDisplace.setAttribute("scale", maximumDisplacement * -20);
         feDisplace.setAttribute("xChannelSelector", "R");
         feDisplace.setAttribute("yChannelSelector", "G");
@@ -249,15 +233,13 @@
         filter.appendChild(feDisplace);
         svg.appendChild(filter);
 
-        // Удаляем старый SVG (если он был), и добавляем новый
+       
         const oldSvg = document.getElementById('liquid-glass-svg');
         if (oldSvg) {
             oldSvg.remove();
         }
         document.body.appendChild(svg);
 
-        // --- 7. Применяем фильтр к nav ---
-        // Важно: backdrop-filter может не работать в браузерах, кроме Chrome
         nav.style.backdropFilter = 'url(#liquid-glass-filter)';
 
 
@@ -267,7 +249,7 @@
 
 
 
-        // --- Код для изменения цвета текста (остается без изменений) ---
+     
         const textElements = [
             document.querySelector('#nav .logo'),
             document.querySelector('#nav .logo-slogan'),
@@ -381,4 +363,5 @@
 
         window.addEventListener('scroll', onScrollResize, { passive: true });
         window.addEventListener('resize', onScrollResize, { passive: true });
+
     });
