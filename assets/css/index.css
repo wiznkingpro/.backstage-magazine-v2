@@ -161,26 +161,36 @@ nav{
 
 .content_two_page_block{
 	width: 100%;
+	min-height: 200px ;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+
 }
 .content_two_page_block img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+
+
 footer{
 	width: 100%;
 	height: 300px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	background-color: black;
 }
+footer a{
+	color: white;
+	font-size: 24px;
+}
+
 
 .search_menu {
 	position: fixed;
@@ -272,12 +282,22 @@ footer{
 	background: #f0f0f0;
 }
 
-/* Placeholder по центру */
+
 .search-form input::placeholder {
 	text-align: center;
 }
 
-/* === Main Menu Overlay === */
+
+.content_main_page_last_photos_desc{
+	
+}
+.content_main_page_last_photos_desc a{
+	margin: 0;
+	padding: 0px 0px 0px 10px;
+}
+.content_main_page_last_photos_desc p{
+
+}
 
 .main_menu {
 	position: fixed;
@@ -288,7 +308,7 @@ footer{
 	background-color: black;
 	opacity: 0;
 	visibility: hidden;
-	z-index: 1100; /* выше поиска */
+	z-index: 1100; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -352,7 +372,6 @@ footer{
 	position: absolute;
 	top: 50%;
   left: 50%;
-  /* коррекция положения элемента */
   transform: translate(-50%, -50%);
 	font-size: 120px;
 	color: white;
@@ -364,7 +383,6 @@ footer{
 	bottom: 20px;
   left: 50%;
   transform: translate(-50%);
-/*  border: 1px solid red;*/
   width: 50px;
   height: 50px;
 }
@@ -420,6 +438,8 @@ footer{
 		width: 100%;
 		height: 250px;
 	}
+
+
 	.content_main_page{
 		width: 100%;
 		height: fit-content;
@@ -449,9 +469,11 @@ footer{
 		padding: 0;
 	}
 	.content_main_page_last_photos_desc{
-		
 		width: 100%;
+		
 	}
+
+
 	.content_two_page{
 		margin: 20px auto;
 	}
@@ -510,6 +532,19 @@ footer{
 		font-size: 26px;
 		width: 260px;
 		padding: 16px 30px;
+	}
+	footer a{
+		font-size: 16px;
+	}
+	#nav{
+		width: 100%;
+	}
+	.nav_right{
+		width: 10%;
+	}
+	.content_main_page_last_photos_desc a{
+		margin: 0;
+		padding: 0px;
 	}
 }
 
