@@ -3,7 +3,6 @@
 .article_container{
 	width: 100%;
 	min-height: 300px;
-/*	border: 1px solid black;*/
 }
 
 .article_container_title{
@@ -33,7 +32,6 @@
 .article_container_main_info_photos{
 	width: 100%;
 	height: 100%;
-/*	border: 1px solid black;*/
 	display: flex;
 
 }
@@ -44,7 +42,7 @@
 .article_container_main_info_text{
 	width: 100%;
 	height: 100%;
-/*	border: 1px solid black;*/
+
 }
 
 .article_container_main_info_text_data{
@@ -69,7 +67,7 @@
 .article_container_optional_news{
 	width: 100%;
 	min-height: 200px;
-/*	border: 1px solid black;*/
+
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;

@@ -3,7 +3,6 @@
 .mailing_main_cont{
 	width: 100%;
 	min-height: 200px;
-/*	border: 1px solid black;*/
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
