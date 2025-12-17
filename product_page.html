@@ -9,16 +9,13 @@
 	<link rel="stylesheet" href="assets/css/index.css">
 	<link rel="stylesheet" href="assets/css/product_page.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/article.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com  ">
+	<link rel="preconnect" href="https://fonts.gstatic.com  " crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alan+Sans  :wght@300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="scroll">
-		<img src="assets/img/scroll-bar.png" alt="">
-	</div>
 	<div class="background_nav"></div>
-	<div class="main_menu" id="main_menu">
+	<nav class="main_menu" id="main_menu">
 		<div class="main_menu_content">
 			<a href="index.html"><button class="menu-item">.Новости</button></a>
 			<a href="fashion.html"><button class="menu-item">.Мода</button></a>
@@ -26,15 +23,15 @@
 			<a href="shop.html"><button class="menu-item">.Магазин</button></a>
 			<a href="mailing.html"><button class="menu-item">.Рассылка</button></a>
 		</div>
-	</div>
-	<div class="search_menu" id="search_menu">
+	</nav>
+	<section class="search_menu" id="search_menu">
 		<div class="search_content">
 			<h1 class="logo search-logo">.backstage <span class="logo-slogan">magazine</span></h1>
 			<form class="search-form">
 				<input type="search" name="search" placeholder="Поиск в .backstage-magazine" autofocus>
 			</form>
 		</div>
-	</div>
+	</section>
 	<nav id="nav">
 		<div class="nav_left">
 			<button onclick="openMainMenu()">Меню</button>
@@ -50,16 +47,16 @@
 		</div>
 	</nav>
 
-	<div class="content">
-		<div class="article_container">
-			<div class="article_container_title">
+	<main class="content">
+		<article class="article_container">
+			<header class="article_container_title">
 				<h1>Paris let me die — футболка</h1>
 				<button>В корзину</button>
-			</div>
-			<div class="article_container_main_info">
-				<div class="article_container_main_info_photos">
+			</header>
+			<section class="article_container_main_info">
+				<figure class="article_container_main_info_photos">
 					<img src="assets/img/A423.png" alt="Футболка 'Paris let me die' от .backstage">
-				</div>
+				</figure>
 				<div class="article_container_main_info_text">
 					<p class="article_container_main_info_text_data">Описание</p>
 					<p align="justify" class="article_container_main_info_text_description">
@@ -75,9 +72,9 @@
 						Цена обусловлена не брендом, а процессом: от ручной выделки ткани до индивидуальной упаковки в переработанную бумагу с оттиском оттиска пальца дизайнера. Каждая футболка — номерной экземпляр, снабжённый сертификатом подлинности. Это инвестиция в slow fashion и устойчивое будущее моды.
 					</p>
 				</div>
-			</div>
+			</section>
 
-			<div class="article_container_optional_news">
+			<section class="article_container_optional_news">
 				<div class="interview-dialog">
 					<div class="dialog-entry">
 						<p><strong>История создания</strong></p><hr><br>
@@ -112,7 +109,7 @@
 						<p>50% направляется в фонд поддержки независимых дизайнеров из стран Global South. Мы верим: мода должна быть инклюзивной — не только в образе, но и в возможностях.</p>
 					</div>
 				</div>
-			</div>
+			</section>
 			<br>
 
 		<footer>
@@ -124,8 +121,8 @@
 			</div>
 			<h2 class="logo">Your .backstage <p class="logo-slogan">magazine</p></h2>
 		</footer>
-		</div>
-	</div>
+		</article>
+	</main>
 
 	<button id="scrollToTop" class="scroll-to-top" aria-label="Наверх">
 		↑
